@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="container">
+    <div class="banner-container">
+        <div class="banner-text-container">
+            <h1 class="banner-heading">Wellcome Mates</h1>
+            <p class="banner-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut amet delectus
+                excepturi accusantium
+                soluta, maxime blanditiis laboriosam accusamus sint totam autem quidem odio voluptatibus
+                perspiciatis animi quibusdam deleniti debitis magnam!</p>
+            <button class="primary-btn">Explore more</button>
+        </div>
+        <div class="banner-image-container">
+            <img src="{% static '/images/banner.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="contact">
+        <h2>Contact us</h2>
+        <div class="form-container">
+            <div class="left"></div>
+            <form action="" class="right">
+                <div class="form-input">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="" placeholder="Your Name">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="" placeholder="Your Email">
+                </div>
+                <div class="form-input">
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" id="" placeholder="Your Phone">
+                </div>
+                <div class="form-input">
+                    <input type="button" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}

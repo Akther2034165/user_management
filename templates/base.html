@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <h2>User Management</h2>
+            <ul class="navlink">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Contact Us</li>
+                <li>
+                    <a href="{% url 'users' %}">Users</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <h2 class="section-title"><span class="highlight">User</span> Management</h2>
+            <p class="section-text">It is a long established fact that a reader will be distracted by the readable
+                <br> content of a page when looking at its layout.
+            <p class="section-copy">@2024, usermanagement.com. All rights reserved. </p>
+        </div>
+    </footer>
+</body>
+
+</html>
