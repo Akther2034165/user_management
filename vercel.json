@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "user_management/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaZie": "15mb", "runtime": "python3.10.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "des": "user_management.wsgi.py"
+    }
+  ]
+}
