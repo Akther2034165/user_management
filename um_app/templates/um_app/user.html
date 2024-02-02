@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
-<div class="container">
+<div class="container user-table">
     <h2 class="user-heading">Users</h2>
     <table>
         <thead>
@@ -12,16 +12,13 @@
             </tr>
         </thead>
         <tbody>
+            {% for user in users %}
             <tr>
-                <td>A</td>
-                <td>A@gmail.com</td>
-                <td>+880-1610945101</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
             </tr>
-            <tr>
-                <td>A</td>
-                <td>A@gmail.com</td>
-                <td>+880-1610945101</td>
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>

@@ -5,10 +5,8 @@
     <div class="banner-container">
         <div class="banner-text-container">
             <h1 class="banner-heading">Wellcome Mates</h1>
-            <p class="banner-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut amet delectus
-                excepturi accusantium
-                soluta, maxime blanditiis laboriosam accusamus sint totam autem quidem odio voluptatibus
-                perspiciatis animi quibusdam deleniti debitis magnam!</p>
+            <p class="banner-text">Empowering your web experience with dynamic content, user-friendly interfaces, and
+                seamless user management using Django and HTML, CSS.</p>
             <button class="primary-btn">Explore more</button>
         </div>
         <div class="banner-image-container">
@@ -16,27 +14,34 @@
         </div>
     </div>
 </section>
-
 <section class="container">
+    <div class="dynamic-content-container">
+        <h2>Dynamic Content</h2>
+        <p>Today: {{ current_datetime }}</p>
+        <p>Quote: "{{ random_quote }}" - {{ quote_author }}</p>
+    </div>
+</section>
+<section class="container" id="contact">
     <div class="contact">
         <h2>Contact us</h2>
         <div class="form-container">
             <div class="left"></div>
-            <form action="" class="right">
+            <form method="post" action="{% url 'home' %}" class="right">
+                {% csrf_token %}
                 <div class="form-input">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="" placeholder="Your Name">
+                    <label for="{{ form.name.id_for_label }}">Name</label>
+                    {{ form.name }}
                 </div>
                 <div class="form-input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="" placeholder="Your Email">
+                    <label for="{{ form.email.id_for_label }}">Email</label>
+                    {{ form.email }}
                 </div>
                 <div class="form-input">
-                    <label for="phone">Phone</label>
-                    <input type="text" name="phone" id="" placeholder="Your Phone">
+                    <label for="{{ form.phone.id_for_label }}">Phone</label>
+                    {{ form.phone }}
                 </div>
                 <div class="form-input">
-                    <input type="button" value="Submit">
+                    <input type="submit" value="Submit">
                 </div>
             </form>
         </div>

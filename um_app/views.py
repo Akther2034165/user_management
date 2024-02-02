@@ -1,5 +1,9 @@
 from django.shortcuts import render
-
+from . models import ContactModel
 # Create your views here.
 def index(request):
-    return render(request, 'um_app/index.html')
+    users = ContactModel.objects.all()
+    context = {
+        'users': users
+    }
+    return render(request, 'um_app/user.html', context)

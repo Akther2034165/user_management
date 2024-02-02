@@ -91,17 +91,20 @@
 .user-heading {
   font-weight: bold;
   font-size: 30px;
-  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: -25px;
 }
 table,
 th,
 td {
   border: 1px solid #8e86f8;
   border-collapse: collapse;
-  padding: 8px 10px;
+  padding: 5px 10px;
 }
 table {
   width: 100%;
+  margin: 50px 0;
 }
 th {
   height: 50px;
@@ -110,7 +113,19 @@ th {
   color: #fff;
   border: 1px solid #8e86f8;
 }
-
+/* dynamic content  */
+.dynamic-content-container {
+  margin: 20px auto;
+}
+.dynamic-content-container h2,
+.dynamic-content-container p {
+  text-align: center;
+  margin: 20px 0px;
+}
+.dynamic-content-container p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
 /* contact */
 .contact {
   width: 100%;
@@ -120,7 +135,7 @@ th {
 }
 .contact h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 .contact p {
@@ -160,7 +175,7 @@ th {
   width: 100%;
   margin-bottom: 0;
 }
-.form-input input[type="button"] {
+.form-input input[type="submit"] {
   background-color: #8e86f8;
   color: #ffffff;
   padding: 10px 10px;
@@ -170,7 +185,7 @@ th {
   font-size: 15px;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
-.form-input input[type="button"]:hover {
+.form-input input[type="submit"]:hover {
   background-color: transparent;
   color: #8e86f8;
   border: 2px solid #8e86f8;
@@ -180,25 +195,54 @@ th {
 .footer-section {
   background-color: #8e86f8;
   height: 200px;
+  color: #fff;
+  font-weight: 500;
 }
 .footer-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-.section-title,
-.section-text {
-  margin-top: 30px;
-  color: black;
+  justify-content: space-between;
+  color: #fff;
 }
 .section-title {
-  font-size: 25px;
   font-weight: 500;
 }
-.section-text {
-  font-size: 20px;
+.footer-container h2 {
+  flex: 1;
 }
-.section-copy {
-  margin-bottom: 20px;
+.footer-container .sub-section {
+  flex: 3;
+}
+.sub-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 15px;
+  gap: 10px;
+}
+.sub-section div {
+  flex: 1;
+}
+.sub-section h3 {
+  font-weight: 500;
+  margin: 20px 0px;
+}
+.sub-section ul > li,
+.sub-section p {
+  list-style: none;
+  font-weight: 400;
+}
+.newsletter-container input {
+  border: 1px solid #8e86f8;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+.newsletter-btn {
+  background-color: white;
+  color: #8e86f8;
+  padding: 8px 10px;
+  border: 2px solid #8e86f8;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
 }
