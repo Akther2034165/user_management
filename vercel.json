@@ -8,8 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "des": "user_management.wsgi.py"
+      "src": "/(.*)"
     }
   ]
 }
